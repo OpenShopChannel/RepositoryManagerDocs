@@ -6,6 +6,8 @@ description: '"file": "mGBA-*-wii.7z"'
 
 File name. Can contain unix filename patterns, with the intention to always support the latest version.
 
+Can optionally be a list containing multiple files.
+
 | Pattern | Matching                           |
 | ------- | ---------------------------------- |
 | \*      | matches everything                 |
