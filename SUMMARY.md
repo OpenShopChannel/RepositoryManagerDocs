@@ -1,0 +1,29 @@
+# Table of contents
+
+* [Repository Manager](README.md)
+
+## Application Manifests <a href="#manifests" id="manifests"></a>
+
+* [Introduction to manifests](manifests/introduction-to-manifests.md)
+* [Example manifest](manifests/example-manifest.md)
+* [Essential Information](manifests/essential-information/README.md)
+  * [Category](manifests/essential-information/category.md)
+  * [Peripherals](manifests/essential-information/peripherals.md)
+* [Source](manifests/source/README.md)
+  * [Format](manifests/source/format.md)
+  * [URL](manifests/source/url/README.md)
+    * [Location](manifests/source/url/location.md)
+  * [GitHub Release](manifests/source/github-release/README.md)
+    * [Repository](manifests/source/github-release/repository.md)
+    * [File](manifests/source/github-release/file.md)
+* [Treatments](manifests/treatments/README.md)
+  * [Contents](manifests/treatments/contents.md)
+  * [Meta](manifests/treatments/meta.md)
+  * [Web](manifests/treatments/web.md)
+  * [Archive](manifests/treatments/archive.md)
+
+***
+
+* [Pattern Matching](pattern-matching.md)
+* [Supported Archive Formats](supported-archive-formats.md)
+* [Credits](credits.md)
