@@ -16,6 +16,7 @@
   * [GitHub Release](manifests/source/github-release/README.md)
     * [Repository](manifests/source/github-release/repository.md)
     * [File](manifests/source/github-release/file.md)
+    * [Additional Files](manifests/source/github-release/additional-files.md)
 * [Treatments](manifests/treatments/README.md)
   * [Contents](manifests/treatments/contents.md)
   * [Meta](manifests/treatments/meta.md)

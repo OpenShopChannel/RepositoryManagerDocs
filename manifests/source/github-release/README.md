@@ -24,8 +24,16 @@ description: Obtain app from a GitHub release.
 [repository.md](repository.md)
 {% endcontent-ref %}
 
-* "file" - The file to obtain from inside the github release
+* "file" - The archive file to obtain from inside the github release (automatically extracted and deleted).
 
 {% content-ref url="file.md" %}
 [file.md](file.md)
+{% endcontent-ref %}
+
+### Optional Fields
+
+* "additional\_files" - Additional files that should be downloaded from the github release.
+
+{% content-ref url="additional-files.md" %}
+[additional-files.md](additional-files.md)
 {% endcontent-ref %}
