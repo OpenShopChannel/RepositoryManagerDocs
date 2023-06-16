@@ -17,7 +17,7 @@
     * [Repository](manifests/source/github-release/repository.md)
     * [File](manifests/source/github-release/file.md)
     * [Additional Files](manifests/source/github-release/additional-files.md)
-  * [SourceForge Release](manifests/source/github-release-1.md)
+  * [SourceForge Release](manifests/source/sourceforge-release.md)
 * [Treatments](manifests/treatments/README.md)
   * [Contents](manifests/treatments/contents.md)
   * [Meta](manifests/treatments/meta.md)
