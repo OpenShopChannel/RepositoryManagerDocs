@@ -18,7 +18,7 @@
     * [File](manifests/source/github-release/file.md)
     * [Additional Files](manifests/source/github-release/additional-files.md)
   * [SourceForge Release](manifests/source/sourceforge-release.md)
-  * [itch.io](manifests/source/sourceforge-release-1.md)
+  * [itch.io](manifests/source/itchio.md)
 * [Treatments](manifests/treatments/README.md)
   * [Contents](manifests/treatments/contents.md)
   * [Meta](manifests/treatments/meta.md)
