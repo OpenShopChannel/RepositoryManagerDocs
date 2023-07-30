@@ -9,4 +9,6 @@ It would also be admired if terminology like "Open Shop Channel client" would be
 
 3\) Have fun coding! =D
 
+<mark style="color:red;">**The API should NEVER be used for the sole intention of replicating oscwii.org's online library with the official repository under a different name or website, and should also never be monetized by web advertisements or by direct purchase. This API is a service to the community and is intended to enable development of helpful utilities and clients, as well as intended to provide valuable data and capabilities to application authors.**</mark>
+
 <figure><img src="../.gitbook/assets/repository-manager-supply-chain.png" alt=""><figcaption><p>Repository Manager! So sophisticated!</p></figcaption></figure>
