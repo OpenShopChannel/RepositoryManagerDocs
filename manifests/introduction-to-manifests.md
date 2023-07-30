@@ -8,6 +8,8 @@ Application manifests are instructions for the Repository Manager server, provid
 
 Application manifests are generally split to several main parts:
 
+<figure><img src="../.gitbook/assets/repository-manager-supply-chain.png" alt=""><figcaption></figcaption></figure>
+
 ### Essential Information
 
 This section includes information that is necessary to distribute the application, apart from information contained in the application's meta.xml, which is obtained by the server using the instructions in the "Source" section.
