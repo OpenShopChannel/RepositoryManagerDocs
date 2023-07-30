@@ -13,7 +13,7 @@ coverY: 0
 
 ## Overview
 
-Repository Manager repositories are structured in a very simple way. The repository root contains a "repository.json" file describing the repository, and a "contents" directory containing manifests for its contents. That's all.
+Repository Manager repositories are structured in a very simple way. The repository root contains a "repository.json" file describing the repository, a "categories.json" file defining the available categories, and a "contents" directory containing manifests for its contents. That's all.
 
 Repository Manager repositories are not designed to be server-less, but managed by a server we call "Repository Manager", which takes the role of serving the official API, obtaining and preparing application files for distribution, and providing support for the Homebrew Browser.
 
