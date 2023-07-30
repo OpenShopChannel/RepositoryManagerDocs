@@ -31,4 +31,14 @@
 
 * [Pattern Matching](pattern-matching.md)
 * [Supported Archive Formats](supported-archive-formats.md)
+
+## API
+
+* [Introduction](api/introduction.md)
+* [Retrieving Information](api/retrieving-information.md)
+* [Retrieving Contents](api/retrieving-contents.md)
+* [Guidelines](api/guidelines.md)
+
+***
+
 * [Credits](credits.md)
