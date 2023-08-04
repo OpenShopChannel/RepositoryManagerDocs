@@ -6,7 +6,7 @@ description: /v3/information
 
 
 
-<figure><img src="../.gitbook/assets/shop-building.png" alt="" width="188"><figcaption><p>Welcome to my shop! The name's Open Shop Channel.</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/repository-information.png" alt="" width="181"><figcaption><p>Welcome to my shop! The name's Open Shop Channel.</p></figcaption></figure>
 
 If a client is written to support multiple repositories, it would be ideal if it could quickly receive general information about a given repository before connecting to it. This endpoint serves that purpose.
 
