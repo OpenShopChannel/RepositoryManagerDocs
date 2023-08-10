@@ -42,3 +42,8 @@
 ***
 
 * [Credits](credits.md)
+
+## Server
+
+* [Introduction](server/introduction.md)
+* [Repository Index](server/repository-index.md)
