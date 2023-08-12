@@ -47,3 +47,4 @@
 
 * [Introduction](server/introduction.md)
 * [Repository Index](server/repository-index.md)
+* [SourceDownloader](server/sourcedownloader.md)
