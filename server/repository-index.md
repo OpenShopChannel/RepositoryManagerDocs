@@ -2,7 +2,7 @@
 
 
 
-<figure><img src="../.gitbook/assets/index-file.png" alt="" width="375"><figcaption><p>Repository Manager Index</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/indexing-status.png" alt=""><figcaption><p>Repository Manager Index</p></figcaption></figure>
 
 Indexing is a central aspect of the Repository Manager server.
 
@@ -17,6 +17,8 @@ If the index file happens to be missing/corrupt when required, an empty index wi
 The index is never directly exposed to the user, and is only used internally. The only way to access the contents of the index externally is through the [API](broken-reference).
 
 ## index.json
+
+<figure><img src="../.gitbook/assets/index-file.png" alt="" width="375"><figcaption><p>Index File</p></figcaption></figure>
 
 Below is a tree of the index file structure:
 
