@@ -1,6 +1,7 @@
 # Table of contents
 
 * [Repository Manager](README.md)
+* [Credits](credits.md)
 
 ## Application Manifests <a href="#manifests" id="manifests"></a>
 
@@ -42,10 +43,6 @@
 * [Retrieving Information](api/retrieving-information.md)
 * [Retrieving Contents](api/retrieving-contents.md)
 * [Guidelines](api/guidelines.md)
-
-***
-
-* [Credits](credits.md)
 
 ## Server
 
