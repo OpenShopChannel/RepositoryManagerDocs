@@ -1,23 +1,21 @@
 # FAQ
 
-### How long does it take for an application/update to be added or applied?
+### How long does it take for an application or update to show up on the repository?
 
-If you updated your application, and the manifest for the application located on the [OpenShopChannel/Apps](https://github.com/OpenShopChannel/Apps) repository can still correctly retrieve it, then the application will be automatically updated on the repository.
+If you've recently updated your application and the repository can still retrieve it correctly using the application manifest located at [OpenShopChannel/Apps](https://github.com/OpenShopChannel/Apps), your update will be automatically added to the repository. However, this process can take some time.
 
-This can take a while. As of writing, Repository Manager indexes all applications 4 times a day, once per 6 hours. This might change in the future.
+Currently, the Repository Manager checks all applications four times a day, with each check happening every 6 hours. Please note that this schedule may change in the future.
 
-The flow for an application update looks like this:
+Here's a simplified breakdown of how an application update gets added:
 
-* Repository Manager starts a regularly scheduled re-index.
-* While trying to retrieve the application, it determines that there has been an update.
-* Application is submitted to moderation. For the time being, the prior version of the app is kept available.
-* Repository Manager finishes re-index.
-* Once again, Repository Manager starts a regularly scheduled re-index.
-* While trying to retrieve the application, it determines that there has been an update.
-* Checks moderation status for this specific update. If passed, update the application. Otherwise, continue skipping it.\
-  **If the application update detected during the previous re-index was pulled by this point, then the update will not be applied.**
-* Repository Manager finishes re-index. **At this point, if the application/update was approved by moderation, it is available on the repository.**
+1. Repository Manager starts its regular check.
+2. During this check, if it detects that there's an update available for an application, it sends the update for moderation. The old version of the app remains available for now.
+3. Repository Manager completes its check.
+4. It then starts another regular check.
+5. During this check, if there's an update, it checks the moderation status. If the update passes moderation, it gets applied; otherwise, it's skipped.
+6. If the update detected in the previous check was removed by this point, the update won't be added.
+7. Repository Manager finishes its check. If the update was approved by moderation, it becomes available in the repository.
 
-If moderation is quick to approve an update, then it will take two regularly scheduled indexings to process an update, or up to around 12 hours.
+If the moderation process is fast, it can take two regular checks, which is roughly 12 hours, to process an update.
 
-If there are issues with applying the update, for example, the directory structure in the distributed archive has changed and Repository Manager can no longer successfully process it, then the manifest will require manual fixing, and this may take much longer.
+However, if there are issues with applying the update, like changes in the archive's directory structure that the Repository Manager can't handle automatically, it will need manual fixing, which may take much longer.
