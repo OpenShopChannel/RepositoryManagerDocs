@@ -32,6 +32,10 @@
 * [Pattern Matching](pattern-matching.md)
 * [Supported Archive Formats](supported-archive-formats.md)
 
+## Information for app developers
+
+* [FAQ](information-for-app-developers/faq.md)
+
 ## API
 
 * [Introduction](api/introduction.md)
