@@ -27,3 +27,8 @@ description: Name, author, category, and so on!
 ### Optional Fields
 
 * "author\_preferred\_contacts" - Free text for explaining how the application author may be officially contacted.
+* "supported\_platforms" - Platforms this app supports. Default is "wii".
+
+{% content-ref url="platforms.md" %}
+[platforms.md](platforms.md)
+{% endcontent-ref %}
