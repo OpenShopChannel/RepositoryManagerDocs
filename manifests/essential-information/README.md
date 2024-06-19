@@ -9,7 +9,7 @@ description: Name, author, category, and so on!
 ### Mandatory Fields
 
 * "name" - Display name for the application. Should usually be identical to the one specified in meta.xml.
-* "author" - Display name for the application's author. Should usually be identical to the one specified in meta.xml.
+* "author" - Display name for the application's author. Should usually be identical to the one specified in meta.xml. Will act as the "Publisher" in the Shop Channel, for more authors see "authors".
 * "category" - Category the application is assigned to.
 
 {% content-ref url="category.md" %}
@@ -27,6 +27,8 @@ description: Name, author, category, and so on!
 ### Optional Fields
 
 * "author\_preferred\_contacts" - Free text for explaining how the application author may be officially contacted.
+* "authors" - A list of people working in the application. Will appear as "Developers" in the official Open Shop Channel website.
+* "contributors" - A list of people that have contributed to the application.
 * "supported\_platforms" - Platforms this app supports. Default is "wii".
 
 {% content-ref url="platforms.md" %}

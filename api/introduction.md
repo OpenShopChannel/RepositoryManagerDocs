@@ -1,19 +1,24 @@
 ---
-description: Repository Manager API (API v3)
+description: Repository Manager API
 ---
 
 # Introduction
-
-{% hint style="warning" %}
-Repository Manager is under development. During this process, things can change substantially. The following documentation is draft documentation for the work in progress v3 API, which will be supported by Repository Manager.\
-\
-Legacy API versions v1 and v2 will continue to be supported for the foreseeable future, but will receive potentially lacking information. It is not recommended to implement these legacy versions, and existing implementations should prepare for a transition to API v3.
-{% endhint %}
 
 Welcome to the Repository Manager API documentation! This API can be used to access, interact with, and retrieve repository information and contents from Repository Manager.
 
 <figure><img src="../.gitbook/assets/needs-no-description.svg" alt="" width="152"><figcaption><p>Documentation</p></figcaption></figure>
 
-Currently, our temporary official testing server can be accessed with the hostname hbb4.oscwii.org, which will usually be running the latest / master version of Repository Manager.
+The Base URL for all requests in this documentation is `https://hbb1.oscwii.org/api`
 
-hbb1.oscwii.org will ultimately be the official server, once Repository Manager is ready to replace the legacy repository system.
+Old API versions were available at `api.oscwii.org`, however, with the discontinuation of v2 and v1, this has been removed.
+
+Before starting, please read the [Guidelines](guidelines.md) that govern the usage of this API.
+
+### API Versioning
+
+Repository Manager exposes versioned API paths to specify which API version you want to use, for example: `https://hbb1.oscwii.org/api/v{version}`
+
+Currently this is the status of the different API versions:
+
+<table><thead><tr><th width="160">Version</th><th>Status</th></tr></thead><tbody><tr><td>4</td><td>Available (Recommended)</td></tr><tr><td>3</td><td>Available</td></tr><tr><td>2</td><td>Discontinued (As of July 1st, 2024)</td></tr><tr><td>1</td><td>Discontinued (As of July 1st, 2024)</td></tr></tbody></table>
+

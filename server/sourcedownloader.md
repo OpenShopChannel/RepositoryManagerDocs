@@ -6,35 +6,42 @@
 
 Apps can be distributed on various different services, websites, and other potential sources. RepositoryManager is designed to support an infinite amount of them. How does it do it?
 
-A "SourceDownloader" is a simple Python file containing instructions for how to obtain an application from a given source, implementing an abstract class "BaseSourceDownloader".\
-SourceDownloaders are stored in the "sources" directory, located in the server root, and are by all means actual source code that runs on the server, so be careful with them.
+A `SourceDownloader` is a Java interface used represent instructions for how to obtain an application from a given source, implementing an abstract class `BaseSourceDownloader`.
 
-All SourceDownloaders contained in the "sources" directory are "installed sources" and imported by the server during repository indexing.
+All SourceDownloaders must be registered using the `SourceRegistry` object, when registered they become "installed sources" and used by the server during repository indexing.
 
 The following is an example of a SourceDownloader:
 
-{% code title="source_downloader.py.example" overflow="wrap" lineNumbers="true" %}
-```python
-from sources.base_source_downloader import BaseSourceDownloader
+{% code title="ExampleDownloader.java" overflow="wrap" lineNumbers="true" %}
+```java
+@Component // Needed so the server knows to instantiate this object automatically
+public class ExampleDownloader extends BaseSourceDownloader
+{
+    @Autowired // Required to receive the registry object
+    private ExampleDownloader(SourceRegistry registry)
+    {
+        // ID, Name, Description
+        super("example", "Mysterious Source Downloader", "Downloads a bunch of stuff from somewhere!!");
+        // Register the downloader
+        registry.registerDownloader(this);
+    }
 
+    @Override
+    protected Request fetchFileInformation(InstalledApp app, Path archivePath, Path tmpDir)
+    {
+        Request request = ...
+        // Fetch source information for this source type
+        // AKA, do all the work to identify the file to download,
+        // then return a request for the file to be downloaded.
+        return request;
+    }
 
-class SourceDownloader(BaseSourceDownloader):
-    name = "Mysterious Source Downloader"
-    description = "Downloads a bunch of stuff from somewhere!!"
-    
-    def __init__(self, oscmeta, temp_dir, log):
-        super().__init__(oscmeta, temp_dir, log)
-        # new fields should be defined here
-        # self.field_name = None
-
-    def fetch_source_information(self):
-        # Fetch source information for this source type
-        # AKA, set the newly created fields
-        pass
-
-    def process_files(self):
-        # Process files for this source type (it is mandatory to output an archive to self.archive_path)
-        # AKA, make use of the newly created fields
-        pass
+    @Override
+    protected void processFiles(InstalledApp app, Path archivePath, Path tmpDir, Request request) throws IOException
+    {
+        // Process files for this source type
+        // AKA, download the file to tmpDir.
+    }
+}
 ```
 {% endcode %}
