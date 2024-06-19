@@ -9,7 +9,7 @@ description: Name, author, category, and so on!
 ### Mandatory Fields
 
 * "name" - Display name for the application. Should usually be identical to the one specified in meta.xml.
-* "author" - Display name for the application's author. Should usually be identical to the one specified in meta.xml. Will act as the "Publisher" in the Shop Channel, for more authors see "authors".
+* "author" - Display name for the application's author. Should usually be identical to the one specified in meta.xml. This will be displayed as the "Publisher" in the Shop Channel, as such it must be only one author.
 * "category" - Category the application is assigned to.
 
 {% content-ref url="category.md" %}

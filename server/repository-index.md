@@ -6,7 +6,7 @@
 
 Indexing is a central aspect of the Repository Manager server.
 
-The role of the repository indexing process is to perform the heavy and long process of collecting and processing all information about a given repository and storing it in a nicely formatted and properly accessible file called the repository index file, alongside files relevant to applications, so that the information contained in them can be accessed instantly and frequently when needed.
+The role of the repository indexing process is to perform the heavy and long process of collecting and processing all information about a given repository and storing it in-memory and inside a database, alongside files relevant to applications, so that the information contained in them can be accessed instantly and frequently when needed.
 
 The repository indexing process usually runs four times per day in order to accomodate potential application updates, and always pulls latest changes from version control before it can start.
 
