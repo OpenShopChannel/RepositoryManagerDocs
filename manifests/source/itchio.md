@@ -4,6 +4,10 @@ description: Obtain app from itch.io.
 
 # itch.io
 
+{% hint style="info" %}
+The itch.io source is no longer available. New apps that use this source will be rejected.
+{% endhint %}
+
 ### Mandatory Fields
 
 * "type" - "itchio"
