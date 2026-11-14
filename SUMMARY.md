@@ -11,6 +11,7 @@
   * [Category](manifests/essential-information/category.md)
   * [Peripherals](manifests/essential-information/peripherals.md)
   * [Flags](manifests/essential-information/flags.md)
+  * [Notices](manifests/essential-information/notices.md)
   * [Platforms](manifests/essential-information/platforms.md)
 * [Source](manifests/source/README.md)
   * [Format](manifests/source/format.md)
