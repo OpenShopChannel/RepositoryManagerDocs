@@ -4,6 +4,10 @@ description: Obtain app from MediaFire.
 
 # MediaFire
 
+{% hint style="info" %}
+The MediaFire source is no longer available. New apps that use this source will be rejected.
+{% endhint %}
+
 ### Mandatory Fields
 
 * "type" - "mediafire"
