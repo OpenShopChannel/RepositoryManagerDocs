@@ -14,12 +14,6 @@ Returns general repository information such as its name, the number of apps it p
 
 {% tabs %}
 {% tab title="200: OK Success!" %}
-
-{% endtab %}
-{% endtabs %}
-
-Example response:
-
 ```json
 {
     "name": "Homebrew Apps",
@@ -75,6 +69,8 @@ Example response:
     ]
 }
 ```
+{% endtab %}
+{% endtabs %}
 
 On the root level of the JSON response, the following fields are available:
 

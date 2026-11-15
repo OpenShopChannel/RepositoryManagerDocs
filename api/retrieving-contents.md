@@ -14,12 +14,6 @@ Returns all apps available in the repository.
 
 {% tabs %}
 {% tab title="200: OK Success!" %}
-
-{% endtab %}
-{% endtabs %}
-
-Example response:
-
 ```json
 [
     {
@@ -53,6 +47,7 @@ Example response:
             }
         },
         "flags": [],
+        "notices": {},
         "package_type": "dol",
         "peripherals": [
             "wii_remote"
@@ -77,6 +72,8 @@ Example response:
   ...
 ]
 ```
+{% endtab %}
+{% endtabs %}
 
 At the root level, this response contains a list of app objects. [Here is a definition for an app object](retrieving-contents.md#application-object) as returned by the API in this endpoint.
 
@@ -88,16 +85,6 @@ Returns the app selected by the repository to be featured, called "App of the Da
 
 {% tabs %}
 {% tab title="200: OK Success!" %}
-
-{% endtab %}
-
-{% tab title="Second Tab" %}
-
-{% endtab %}
-{% endtabs %}
-
-Example response:
-
 ```json
 {
     "slug": "smw-wiigii",
@@ -130,6 +117,7 @@ Example response:
         }
     },
     "flags": [],
+    "notices": {},
     "package_type": "dol",
     "peripherals": [
         "wii_remote",
@@ -156,10 +144,16 @@ Example response:
     "version": "1.4"
 }
 ```
+{% endtab %}
+
+{% tab title="Second Tab" %}
+
+{% endtab %}
+{% endtabs %}
 
 ## Application object:
 
-<table data-full-width="true"><thead><tr><th width="209">Field</th><th width="414.3333333333333">Description</th><th>Type</th></tr></thead><tbody><tr><td>slug</td><td>Application slug. Formerly known as "internal_name" or "hbbID". The application on the repository would be called &#x3C;slug>.oscmeta.</td><td>String</td></tr><tr><td>name</td><td>The display name of the application, as specified in meta.xml (fallback value: name field on manifest)</td><td>String</td></tr><tr><td>author</td><td>The main author of the application, as specified in the meta.xml (fallback value: author field on manifest).</td><td>String</td></tr><tr><td>authors</td><td>A list of other developers of the application.</td><td>List of Strings</td></tr><tr><td>category</td><td>Name of category, as specified in the application manifest. Will always be a category declared as an available category in the <a href="retrieving-information.md">information endpoint</a> and the categories.json file in repository root.</td><td>String</td></tr><tr><td>contributors</td><td>A list of contributors (not developers) of the application.</td><td>List of Strings</td></tr><tr><td>description</td><td>Description of the application, as specified in meta.xml.</td><td><a href="retrieving-contents.md#description">Description</a></td></tr><tr><td>assets</td><td>All the available assets for this application.</td><td><a href="retrieving-contents.md#assets">Assets</a></td></tr><tr><td>flags</td><td>List of flags for this application.</td><td>List of <a href="../manifests/essential-information/flags.md">Flags</a></td></tr><tr><td>package_type</td><td>One of two values: <code>dol</code> / <code>elf</code>. This indicates the binary type of the application.</td><td>String</td></tr><tr><td>peripherals</td><td>Peripherals supported by the application.</td><td>List of <a href="../manifests/essential-information/peripherals.md">Peripherals</a></td></tr><tr><td>release_date</td><td>UNIX timestamp of the application's release date as specified in meta.xml.<br>Fallback: binary creation date.</td><td>Integer</td></tr><tr><td>shop</td><td>Information used by the Shop Channel.</td><td><a href="retrieving-contents.md#shop-information">Shop Information</a></td></tr><tr><td>subdirectories</td><td>List of additional directories to be created, updated, or backed up by the client. Relative paths. Used by Homebrew Browser.</td><td>List of Strings</td></tr><tr><td>supported_platforms</td><td>List of platforms this app supports.</td><td>List of <a href="../manifests/essential-information/platforms.md">Platforms</a></td></tr><tr><td>uncompressed_size</td><td>The size of all the files of the application, uncompressed, in bytes.</td><td>Long</td></tr><tr><td>version</td><td>Version as specified in the meta.xml.</td><td>String</td></tr></tbody></table>
+<table data-full-width="true"><thead><tr><th width="209">Field</th><th width="414.3333333333333">Description</th><th>Type</th></tr></thead><tbody><tr><td>slug</td><td>Application slug. Formerly known as "internal_name" or "hbbID". The application on the repository would be called &#x3C;slug>.oscmeta.</td><td>String</td></tr><tr><td>name</td><td>The display name of the application, as specified in meta.xml (fallback value: name field on manifest)</td><td>String</td></tr><tr><td>author</td><td>The main author of the application, as specified in the meta.xml (fallback value: author field on manifest).</td><td>String</td></tr><tr><td>authors</td><td>A list of other developers of the application.</td><td>List of Strings</td></tr><tr><td>category</td><td>Name of category, as specified in the application manifest. Will always be a category declared as an available category in the <a href="retrieving-information.md">information endpoint</a> and the categories.json file in repository root.</td><td>String</td></tr><tr><td>contributors</td><td>A list of contributors (not developers) of the application.</td><td>List of Strings</td></tr><tr><td>description</td><td>Description of the application, as specified in meta.xml.</td><td><a href="retrieving-contents.md#description">Description</a></td></tr><tr><td>assets</td><td>All the available assets for this application.</td><td><a href="retrieving-contents.md#assets">Assets</a></td></tr><tr><td>flags</td><td>List of flags for this application.</td><td>List of <a href="../manifests/essential-information/flags.md">Flags</a></td></tr><tr><td>notices</td><td>List of notices for this application.</td><td><a href="../manifests/essential-information/notices.md">Notices</a></td></tr><tr><td>package_type</td><td>One of two values: <code>dol</code> / <code>elf</code>. This indicates the binary type of the application.</td><td>String</td></tr><tr><td>peripherals</td><td>Peripherals supported by the application.</td><td>List of <a href="../manifests/essential-information/peripherals.md">Peripherals</a></td></tr><tr><td>release_date</td><td>UNIX timestamp of the application's release date as specified in meta.xml.<br>Fallback: binary creation date.</td><td>Integer</td></tr><tr><td>shop</td><td>Information used by the Shop Channel.</td><td><a href="retrieving-contents.md#shop-information">Shop Information</a></td></tr><tr><td>subdirectories</td><td>List of additional directories to be created, updated, or backed up by the client. Relative paths. Used by Homebrew Browser.</td><td>List of Strings</td></tr><tr><td>supported_platforms</td><td>List of platforms this app supports.</td><td>List of <a href="../manifests/essential-information/platforms.md">Platforms</a></td></tr><tr><td>uncompressed_size</td><td>The size of all the files of the application, uncompressed, in bytes.</td><td>Long</td></tr><tr><td>version</td><td>Version as specified in the meta.xml.</td><td>String</td></tr></tbody></table>
 
 ### Assets
 
